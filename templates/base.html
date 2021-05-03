@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Joeonome's Blog
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400"
+        rel="stylesheet">
+        <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <div>
+        <header>
+            <div class="nav-left">
+                <h1>
+                    <a href="{% url 'home' %}">Joeonome's Blog</a>
+                </h1>
+            </div>
+            <div class="nav-right">
+                <a href="{% url 'post_new' %}" class="text-deco">New Blog Post</a>
+            </div>
+        </header>
+        {% if user.is_authenticated %}
+            <p>Hi {{ user.username }}!</p>
+            <p><a href="{% url 'logout' %}">Log out</a> |
+            <a href="{% url 'password_change' %}">Change Password</a></p>
+
+        {% else %}
+            <p>You are not logged in.</p>
+            <a href="{% url 'login' %}">Log In</a> |
+            <a href="{% url 'signup' %}">Sign Up</a> |
+            <a href="{% url 'password_reset' %}">Forgot Password?</a>
+        {% endif %}
+        <div>
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+    </body>
+</html>
