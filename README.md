@@ -1,9 +1,13 @@
 # CRUD-Django-Task
 Zuri Training
 
-Good day mentor. I have not been able to finish my task due to the complexity, school work(I am an MBBS student), and power(light) challenges. 
-I promise to work on it before the end of this week. Please bear with me :(
-Thanks for your understanding.
+#account app contains all our registrstion credentials logic
+#blog is the main app
+#config is the mother django app created with #startproject command
+#my_env is my virtual environment created with venv
+#static contails my css code, but i had to disable it unfortunately because it was hindering my deployment on heroku
+#templates contains our html based views
+all other files are necessary inclusions for the running of the project and deployment
 
-Sincerely,
-Joseph Onumeguolor.
+the link to the deployed app:
+https://peaceful-sands-35204.herokuapp.com/
